@@ -37,7 +37,7 @@ router.get('/', async (req, res) => {
         return res.status(200).json({count : books.length, data : books});
     } catch (error) {
         console.log(error);
-        res.send(500).send({message : error.message});
+        res.send(500).json({message : error.message});
     }
 });
 
@@ -57,8 +57,8 @@ router.get('/:id', async (req, res) => {
 
         return res.status(200).json(book);
     } catch (error) {
-        console.error(error); // Changed to console.error for better error tracking
-        res.status(500).json({ message: error.message }); // Changed .sendStatus to .status and added .json
+        console.error(error); 
+        res.status(500).json({ message: error.message }); 
     }
 });
  
