@@ -89,7 +89,7 @@ function Home() {
                                         >
                                             <MdOutlineDelete className='text-2xl' />
                                         </Link>
-                                    </div>
+                                        </div>
                                 </td>
                             </tr>
                         ))}
